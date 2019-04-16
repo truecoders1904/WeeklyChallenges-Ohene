@@ -8,7 +8,7 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
-            throw new NotImplementedException();
+            return num1 == num2;
         }
 
         public double Subtract(double minuend, double subtrahend)
@@ -28,6 +28,7 @@ namespace ChallengesWithTestsMarkVII
 
         }
 
+
         public long Multiply(long factor1, long factor2)
         {
             return factor1 * factor2;
@@ -35,12 +36,22 @@ namespace ChallengesWithTestsMarkVII
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+            if (nameOfPerson != "")
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
+
+
+            else
+            {
+                return $"Hello!";
+            }
+
         }
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            return "HEY!";
         }
     }
 }
