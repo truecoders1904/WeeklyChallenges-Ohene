@@ -15,8 +15,6 @@ namespace ChallengesWithTestsMarkVII
         {
             return minuend - subtrahend;
         }
-        
-            
 
 
         public int Add(int number1, int number2)
@@ -26,7 +24,8 @@ namespace ChallengesWithTestsMarkVII
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            throw new NotImplementedException();
+            return Math.Min(number1, number2);
+
         }
 
         public long Multiply(long factor1, long factor2)
