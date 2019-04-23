@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMarkVII
 {
@@ -47,7 +48,11 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            int total = numbers.Sum();
+            return total % 2 != 0;
+
+
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
