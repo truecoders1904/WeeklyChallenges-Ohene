@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace ChallengesWithTestsMarkVII
 {
     public class ChallengesSet02
@@ -43,12 +44,30 @@ namespace ChallengesWithTestsMarkVII
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            int i;
+            int sum = 0;
+
+            for (i = 0; i < numbers.Length; i++)
+            {
+               
+                if(numbers[i] % 2 == 0)
+                { 
+                    sum += numbers[i];
+                }
+               else if (numbers[i] % 2 !=0)
+                {
+                    sum += 0;
+                }
+            }
+
+            return sum;
+
+           
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            //throw new NotImplementedException();
+          
             int total = numbers.Sum();
             return total % 2 != 0;
 
