@@ -39,7 +39,29 @@ namespace ChallengesWithTestsMarkVII
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            int i;
+            int sum = 0;
+
+            if (numbers.Length == 0)
+            {
+                return 0;
+            }
+
+            else
+            for (i = 0; i < numbers.Length; i++)
+            { 
+
+                { 
+                    sum += numbers[i];
+                }
+              
+            }
+            return sum;
+
+
+
+             //throw new NotImplementedException();
+
         }
 
         public int SumEvens(int[] numbers)
@@ -48,8 +70,7 @@ namespace ChallengesWithTestsMarkVII
             int sum = 0;
 
             for (i = 0; i < numbers.Length; i++)
-            {
-               
+            { 
                 if(numbers[i] % 2 == 0)
                 { 
                     sum += numbers[i];
