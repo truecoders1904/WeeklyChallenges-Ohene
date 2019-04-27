@@ -58,7 +58,6 @@ namespace ChallengesWithTestsMarkVII
             int i;
             int sum = 0;
 
-            //if (numbers.Length == 0 || numbers == null)
             if (!(numbers?.Length > 0))
             {
                 return 0;
