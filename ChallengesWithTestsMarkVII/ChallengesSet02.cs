@@ -9,22 +9,26 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool CharacterIsALetter(char c)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return char.IsLetter(c);
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return vals.Length % 2 == 0;
         }
 
         public bool IsNumberEven(int number)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return number % 2 == 0;
         }
 
         public bool IsNumberOdd(int num)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return num % 2 != 0;
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
@@ -57,17 +61,18 @@ namespace ChallengesWithTestsMarkVII
               
             }
             return sum;
-
-
-
-             //throw new NotImplementedException();
-
         }
 
         public int SumEvens(int[] numbers)
         {
+            //MISSING nullable type
             int i;
             int sum = 0;
+
+            if (numbers.Length == 0)
+            {
+                return 0;
+            } 
 
             for (i = 0; i < numbers.Length; i++)
             { 
@@ -88,7 +93,7 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsSumOdd(List<int> numbers)
         {
-          
+          //MISSING NULL
             int total = numbers.Sum();
             return total % 2 != 0;
 
