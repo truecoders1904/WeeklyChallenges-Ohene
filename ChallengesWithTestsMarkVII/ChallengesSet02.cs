@@ -12,6 +12,8 @@ namespace ChallengesWithTestsMarkVII
             return char.IsLetter(c);
         }
 
+// MISSSING CharacterIsNotALetter
+
         public bool CountOfElementsIsEven(string[] vals)
         {
             return vals.Length % 2 == 0;
@@ -29,7 +31,14 @@ namespace ChallengesWithTestsMarkVII
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || !numbers.Any())
+            {
+                return 0;
+            }
+            else
+            {
+                return numbers.Min() + numbers.Max();
+            }
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -38,11 +47,9 @@ namespace ChallengesWithTestsMarkVII
             {
                 return str1.Length;
             }
-                 
             else
             {
                 return str2.Length;
-
             }
         }
 
@@ -51,7 +58,8 @@ namespace ChallengesWithTestsMarkVII
             int i;
             int sum = 0;
 
-            if (numbers.Length == 0)
+            //if (numbers.Length == 0 || numbers == null)
+            if (!(numbers?.Length > 0))
             {
                 return 0;
             }
@@ -74,7 +82,7 @@ namespace ChallengesWithTestsMarkVII
             int i;
             int sum = 0;
 
-            if (numbers.Length == 0)
+            if (numbers.Length == 0 || numbers == null)
             {
                 return 0;
             } 
@@ -107,7 +115,20 @@ namespace ChallengesWithTestsMarkVII
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            if (number < 0 || number == 0)
+            {
+                return 0;
+            }
+
+            else if (number % 2 == 0)
+            {
+                return number / 2;
+            }
+            else 
+            {
+                return (number - 1) / 2;
+            }
         }
     }
 }
