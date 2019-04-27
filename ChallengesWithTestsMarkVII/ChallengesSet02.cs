@@ -9,25 +9,21 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool CharacterIsALetter(char c)
         {
-            //throw new NotImplementedException();
             return char.IsLetter(c);
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            //throw new NotImplementedException();
             return vals.Length % 2 == 0;
         }
 
         public bool IsNumberEven(int number)
         {
-            //throw new NotImplementedException();
             return number % 2 == 0;
         }
 
         public bool IsNumberOdd(int num)
         {
-            //throw new NotImplementedException();
             return num % 2 != 0;
         }
 
@@ -38,7 +34,16 @@ namespace ChallengesWithTestsMarkVII
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            if (str1.Length < str2.Length)
+            {
+                return str1.Length;
+            }
+                 
+            else
+            {
+                return str2.Length;
+
+            }
         }
 
         public int Sum(int[] numbers)
