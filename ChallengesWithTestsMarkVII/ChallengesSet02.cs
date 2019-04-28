@@ -9,8 +9,16 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool CharacterIsALetter(char c)
         {
-            return char.IsLetter(c);
+            if (Char.IsLetter(c))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+         
 
 // MISSSING CharacterIsNotALetter
 
@@ -77,11 +85,11 @@ namespace ChallengesWithTestsMarkVII
 
         public int SumEvens(int[] numbers)
         {
-            //MISSING nullable type
+
             int i;
             int sum = 0;
 
-            if (numbers.Length == 0 || numbers == null)
+            if (!(numbers?.Length > 0))
             {
                 return 0;
             } 
@@ -105,16 +113,24 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsSumOdd(List<int> numbers)
         {
-          //MISSING NULL
             int total = numbers.Sum();
-            return total % 2 != 0;
 
-
+            if (numbers.Count == 0)
+            {
+                return false;
+            }
+            else if (total % 2 == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            //throw new NotImplementedException();
             if (number < 0 || number == 0)
             {
                 return 0;
