@@ -9,18 +9,8 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool CharacterIsALetter(char c)
         {
-            if (Char.IsLetter(c))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return char.IsLetter(c);
         }
-         
-
-// MISSSING CharacterIsNotALetter
 
         public bool CountOfElementsIsEven(string[] vals)
         {
@@ -107,25 +97,34 @@ namespace ChallengesWithTestsMarkVII
             }
 
             return sum;
-
-           
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            int total = numbers.Sum();
 
-            if (numbers.Count == 0)
+
+            if (numbers == null)
             {
                 return false;
             }
-            else if (total % 2 == 0)
-            {
-                return false;
-            }
+
             else
             {
-                return true;
+                int total = numbers.Sum();
+
+                if (numbers.Count == 0)
+                {
+                    return false;
+                }
+                else if (total % 2 == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+
             }
         }
 
