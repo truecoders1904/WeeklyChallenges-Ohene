@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace ChallengesWithTestsMarkVII
 {
     public class ChallengesSet03
@@ -47,7 +48,25 @@ namespace ChallengesWithTestsMarkVII
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+           //string upperCasedWord;
+           //string[] upperCasedArray = new string[words.Length]; 
+
+            for (int i = 0; i < words.Length; i++)
+            {
+
+
+
+                words[i] = words[i].ToUpper();
+                //upperCasedArray[i] = words[i].ToUpper();
+
+                //upperCasedWord = words[i].ToUpper();
+
+                //upperCasedArray[i] = upperCasedWord;
+
+            }
+
+
+           
         }
     }
 }
