@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace ChallengesWithTestsMarkVII
@@ -8,8 +9,14 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
-        }
+            foreach (bool item in vals)
+            {
+                if (item == false)
+                {
+                    return true;
+                }
+            }return false;
+        } 
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
@@ -48,25 +55,10 @@ namespace ChallengesWithTestsMarkVII
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-           //string upperCasedWord;
-           //string[] upperCasedArray = new string[words.Length]; 
-
             for (int i = 0; i < words.Length; i++)
             {
-
-
-
-                words[i] = words[i].ToUpper();
-                //upperCasedArray[i] = words[i].ToUpper();
-
-                //upperCasedWord = words[i].ToUpper();
-
-                //upperCasedArray[i] = upperCasedWord;
-
+                  words[i] = words[i].ToUpper();
             }
-
-
-           
         }
     }
 }
