@@ -20,8 +20,16 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            List<int> EvenOdd = IEnumerable.Range(numbers.Min(), numbers.Max()).ToList();             List<int> Odds = EvenOdd.Where(num => num % 2 != 0).ToList();
+
+             if (numbers == null || !numbers.Any())             {                 return false;
+             }
+
+             else if (Odds.Count % 2 != 0)             {                 return true;             }              return false;
+             
+            throw new NotImplementedException();           
         }
+
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
@@ -49,12 +57,25 @@ namespace ChallengesWithTestsMarkVII
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            return nums[nums.Length - 1] - nums[0];            
         }
 
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            int[] oddsValues = new int[50];
+            int odds = 1;
+
+            for (int i = 0; i < 50; i++)
+    
+            {
+                if (odds % 2 != 0)
+                {
+                    oddsValues[i] = odds;
+                    odds += 2;
+                }
+
+            }
+            return oddsValues;
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
