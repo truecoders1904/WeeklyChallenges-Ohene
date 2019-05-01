@@ -20,14 +20,24 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            List<int> EvenOdd = IEnumerable.Range(numbers.Min(), numbers.Max()).ToList();             List<int> Odds = EvenOdd.Where(num => num % 2 != 0).ToList();
 
-             if (numbers == null || !numbers.Any())             {                 return false;
-             }
+            if (numbers == null || !numbers.Any())
+            {
+                return false;
+            }
 
-             else if (Odds.Count % 2 != 0)             {                 return true;             }              return false;
-             
-            throw new NotImplementedException();           
+            int startingPoint = 0;
+
+            foreach (int number in numbers)
+            {
+                if(number % 2 != 0)
+                {
+                    startingPoint++;
+                }
+               
+            }
+
+            return (startingPoint % 2 != 0);             
         }
 
 
