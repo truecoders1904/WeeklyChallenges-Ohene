@@ -36,14 +36,14 @@ namespace ChallengesWithTestsMarkVII
                 }
                
             }
-
-            return (startingPoint % 2 != 0);             
+            return (startingPoint % 2 != 0);    
         }
 
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            return password.Any(char.IsUpper) && password.Any(char.IsLower) && password.Any(char.IsDigit);
+          
         }
 
         public char GetFirstLetterOfString(string val)
