@@ -91,17 +91,50 @@ namespace ChallengesWithTestsMarkVII
 
         public double AverageEvens(int[] numbers)
         {
-            //int sumOfNumbers = 0;
-            //convert sumOfNumbers to a bool 
-            //double count = 0;
-            //count cannot be 0;
-            throw new NotImplementedException();
+            double count = 0;
+
+            if (numbers == null)
+            {
+                return 0;
+            }
+            int sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    sum += numbers[i];
+                    count++;
+                }
+            }
+            if (count == 0)
+
+                return 0;
+            return sum / count;
+
 
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            if(number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            else
+            {
+                int factorial = 1;
+                for (int i = 1; i <= number; i++)
+                {
+
+                    factorial = factorial * i;
+                }
+
+                return factorial;
+            }
+
+
         }
+
+
     }
 }
