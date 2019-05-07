@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+
 
 namespace ChallengesWithTestsMarkVII
 {
@@ -24,13 +27,25 @@ namespace ChallengesWithTestsMarkVII
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
+            int num1 =str1.Length;
+            int num2 =str2.Length;
+            int num3 =str3.Length;
+            int num4 =str4.Length;
 
-            throw new NotImplementedException();
+            List<int> numbersList = new List<int>() { num1, num2, num3, num4 };
+
+            return numbersList.Min();
+
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            throw new NotImplementedException();
+           
+            List<int> numbersList = new List<int>() { number1, number2, number3, number4 };
+
+            return (numbersList).Min();
+
+       
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
