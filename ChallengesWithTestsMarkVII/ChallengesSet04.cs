@@ -65,13 +65,31 @@ namespace ChallengesWithTestsMarkVII
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
+          
+
         {
-            throw new NotImplementedException();
+            int i, count = 0;
+            for (i = 0; i < objs.Length; i++)
+            {
+                if (objs[i] == null)
+                    count++;
+            }
+            if (count > objs.Length / 2)
+                return true;
+            else if (count * 2 < objs.Length)
+                return false;
+            return false;
+         
         }
 
         public double AverageEvens(int[] numbers)
         {
+            //int sumOfNumbers = 0;
+            //convert sumOfNumbers to a bool 
+            //double count = 0;
+            //count cannot be 0;
             throw new NotImplementedException();
+
         }
 
         public int Factorial(int number)
