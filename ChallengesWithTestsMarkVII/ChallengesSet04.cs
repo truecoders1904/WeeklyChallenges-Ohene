@@ -50,7 +50,9 @@ namespace ChallengesWithTestsMarkVII
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            throw new NotImplementedException();
+            biz.Name = "TrueCoders";
+
+
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
@@ -83,7 +85,7 @@ namespace ChallengesWithTestsMarkVII
                 if (objs[i] == null)
                     count++;
             }
-            if (count > objs.Length / 2)
+            if (2 * count > objs.Length)
                 return true;
             return false;
          
