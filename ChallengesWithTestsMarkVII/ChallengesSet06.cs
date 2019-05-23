@@ -7,8 +7,36 @@ namespace ChallengesWithTestsMarkVII
     public class ChallengesSet06
     {
         public bool CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase)
-        {
-            throw new NotImplementedException();
+        {   
+            if (words == null)//cannot check the case of a null, what if the collection is null
+            {
+                return false;
+            }
+            string wordToFind = word;
+            if (ignoreCase == false)
+            {
+                foreach (string item in words)
+                {
+                    if (item == wordToFind)
+                    {
+                        return true;
+                    }
+                        
+                }
+            }
+            else
+                foreach (string item in words)
+                {
+                    if(item == null)
+                    {
+                        break;
+                    }
+                    else if (item.ToLower() == wordToFind)
+                    {
+                        return true;
+                    }      
+                }
+            return false;
         }
 
         public bool IsPrimeNumber(int num)
@@ -49,26 +77,43 @@ namespace ChallengesWithTestsMarkVII
                     {
                         break;
                     }
-
-
                 }
-
-
                 if (counter == 1)
                     return i;
-
             }
-
-
             return -1;
-
-
         } 
-
 
         public int MaxConsecutiveCount(int[] numbers)
         {
-            throw new NotImplementedException();
+            {
+                int newCount = 0;
+                int counter = 0;
+                for (int i = 0; i < numbers.Length; i++)
+                {   
+                    newCount = 1;//change from zero to 1
+
+                    for (int j = i + 1; j < numbers.Length; j++)//change to j = i
+                    {
+                        if (numbers[i] == numbers[j])
+                        {
+                            newCount++;//you should do something to this loop if the condition is not met
+                        }
+                        else
+                        {
+                            break;//when the first condition is not met, break
+                        }
+
+                    }
+                    if (newCount > counter)//put this loop OUTSIDE first for loop
+                    {
+                        counter = newCount;//change by adding 1 while above is
+                    }
+
+                }
+                return counter;
+            }
+            
         }
 
         public double[] GetEveryNthElement(List<double> elements, int n)
